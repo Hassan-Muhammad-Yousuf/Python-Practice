@@ -6,36 +6,28 @@ import re
 import sys
 
 
-
-#
-# Complete the 'findMedian' function below.
-#
-# The function is expected to return an INTEGER.
-# The function accepts INTEGER_ARRAY arr as parameter.
-#
-
 def findMedian(arr):
     arr.sort()
     n = len(arr)
     if n % 2 == 0:
-        m1 = arr[n//2]
-        m2 = arr[n//2 - 1]
-        m = (m1 + m2) / 2
+        # For even length, median is the average of the two middle numbers
+        m1 = arr[n // 2]
+        m2 = arr[n // 2 - 1]
+        m = (m1 + m2) // 2  # Use integer division for exact median
     else:
-        m = arr[n//2]
-    print(str(m))
+        # For odd length, median is the middle number
+        m = arr[n // 2]
     return m
 
 if __name__ == '__main__':
+    # Read the number of integers (not used directly in the function)
+    _ = int(input().strip())
     
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
-
-    n = int(input().strip())
-
+    # Read the list of integers
     arr = list(map(int, input().rstrip().split()))
 
+    # Find the median
     result = findMedian(arr)
 
-    fptr.write(str(result) + '\n')
-
-    fptr.close()
+    # Print the result to the console
+    print(result)
