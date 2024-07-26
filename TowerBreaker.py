@@ -16,7 +16,7 @@ import sys
 #
 
 def towerBreakers(n, m):
-    if n != 1 and n % 2 == 0:
+    if m == 1 or n % 2 == 0:
         return 2
     else:
         return 1
