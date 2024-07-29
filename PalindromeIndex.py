@@ -17,11 +17,9 @@ import sys
 
 def palindromeIndex(s):
     n = len(s)
-    
+ 
     if s == s[::-1]:
         return -1
-    
-    
     
     for i in range(n):
         if s[i] != s[n-1-i]:
