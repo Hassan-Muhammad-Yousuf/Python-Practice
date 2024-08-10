@@ -82,32 +82,34 @@ class Union_Rank_Size:
         else:
             self.union_by_size(i,j)
 
-    def main():
-        # Get the number of elements from the user
-        n = int(input("Enter the number of elements: "))
+def main():
+    # Get the number of elements from the user
+    n = int(input("Enter the number of elements: "))
 
-        # Ask if user wants to use union by rank or size
-        use_rank = input("Use union by rank? (yes/no): ").strip().lower() == 'yes'
+    # Ask if user wants to use union by rank or size
+    use_rank = input("Use union by rank? (yes/no): ").strip().lower() == 'yes'
 
-        # Initialize Union_Rank_Size instance
-        unionFind = Union_Rank_Size(n)
-        unionFind.use_rank = use_rank
+    # Initialize Union_Rank_Size instance
+    unionFind = Union_Rank_Size(n)
+    unionFind.use_rank = use_rank
 
-        # Get the number of union operations from the user
-        num_operations = int(input("Enter the number of union operations: "))
+    # Get the number of union operations from the user
+    num_operations = int(input("Enter the number of union operations: "))
 
-        # Perform union operations based on user input
-        for _ in range(num_operations):
-            # Read a pair of elements to unite
-            i, j = map(int, input("Enter the pair of elements to union (e.g., '0 1'): ").split())
-            # Perform the union operation
-            unionFind.union(i, j)
+    # Perform union operations based on user input
+    for _ in range(num_operations):
+        # Read a pair of elements to unite
+        i, j = map(int, input("Enter the pair of elements to union (e.g., '0 1'): ").split())
+        # Perform the union operation
+        unionFind.union(i, j)
 
-        # Print the representative of each element after all unions
-        print("\nResult:")
-        for i in range(n):
-            print(f"Element {i}: Representative = {unionFind.find(i)}")
+    # Print the representative of each element after all unions
+    print("\nResult:")
+    for i in range(n):
+        print(f"Element {i}: Representative = {unionFind.find(i)}")
 
-    # Ensure this script runs the main function if executed directly
+
+# Ensure this script runs the main function if executed directly
 if __name__ == "__main__":
-    Union_Rank_Size.main()
+    main()
+
