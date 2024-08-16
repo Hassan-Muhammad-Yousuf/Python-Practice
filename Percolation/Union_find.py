@@ -1,41 +1,35 @@
 class UnionFind:
-    def __init__(self,n):
-        #initialize the union find structure with n element
-        self.parent = list(range(n))  # each element is their own parent 
-        self.rank = [1 * n] #tracking tee depth by rank
+    def __init__(self, n):
+        # Initialize the union-find structure with n elements
+        self.parent = list(range(n))  # Each element is its own parent initially
+        self.rank = [0] * n  # Initialize ranks to 0 for all elements
 
-    def find(self,i):
-    #if i is the parent of itself
-        if (self.parent[i] == i):
-            
-            #Return i  becuase it is the parent of itself
+    def find(self, i):
+        # Find the root of element 'i' with path compression
+        if self.parent[i] == i:
+            # If 'i' is the parent of itself, return 'i'
             return i
         else:
-            #else if i is not the parent so we call find function to find it
-            result = self.find(self.parent[i])
-            #Storing the i's node which is root in the results
-            self.parent[i] = result
-            
-            return result 
-    
+            # Recursively find the root and apply path compression
+            root = self.find(self.parent[i])
+            self.parent[i] = root  # Make 'i' directly point to the root
+            return root
+
     def union(self, i, j):
+        # Union the sets containing elements 'i' and 'j'
         rooti = self.find(i)
         rootj = self.find(j)
 
         if rooti != rootj:
-            #attach similar tree under larger tree sorted by rank
+            # Attach smaller tree under larger tree, based on rank
             if self.rank[rooti] > self.rank[rootj]:
                 self.parent[rootj] = rooti
-            if self.rank[rooti] < self.rank[rootj]:
+            elif self.rank[rooti] < self.rank[rootj]:
                 self.parent[rooti] = rootj
             else:
                 self.parent[rootj] = rooti
+                self.rank[rooti] += 1  # Increase rank if both trees have the same rank
 
-                self.rank[rooti] += 1 #increase rank if both have the same rank
-    
     def connected(self, i, j):
-        #checking the elements are in smae set
-        return self.find[i] == self.find[j]
-    
-        
-
+        # Check if elements 'i' and 'j' are in the same set
+        return self.find(i) == self.find(j)

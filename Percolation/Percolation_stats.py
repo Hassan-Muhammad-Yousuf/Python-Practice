@@ -1,6 +1,6 @@
 import numpy as np
 import random
-from Percolation import Percolation
+from percolation import Percolation
 
 
 class PercolationStats:

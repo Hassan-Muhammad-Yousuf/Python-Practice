@@ -1,4 +1,4 @@
-from Percolation_stats import PercolationStats
+from percolation_stats import PercolationStats
 from visual import visual_perc
 
 def main():
