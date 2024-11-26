@@ -115,3 +115,213 @@
 # l3 = list(map(lambda x,y: x*y, l1,l2))
 # print(l3)
 
+# from functools import *
+# l = [1,2,3,4,5]
+# r =reduce(lambda a,b: a+b, l)
+# print(r)
+
+
+# r1 = reduce(lambda x,y: x*y, range(1,50))
+# print(r1)
+
+# def test():
+#     print("test() function is started")
+#     def test1():
+#         print("test1() function execution")
+#     print("test func() is calling test1()")
+#     test1()
+# test()
+
+# def test():
+#     print("test() function is started")
+#     def test1():
+#         print("test1() function execution")
+#     print("test func() is returning test1()")
+#     return test1
+# l = test()
+# l()
+# l()
+# l()
+# l()
+
+# def test(fun):
+#     def wrap(n):
+#         if n == 'Hassan':
+#             print("This is Hassan")
+#         else:
+#             fun(n)
+#     return wrap
+
+# @test
+# def test1(n):
+#     print(n, "Welcome")
+
+# test1("Xyz")
+# test1("Zyx")
+# test1("Hassan")
+
+# def test(fun):
+#     def wrap(n):
+#         if n == 'Hassan':
+#             print("This is Hassan")
+#         else:
+#             fun(n)
+#     return wrap
+
+
+# def test1(n):
+#     print(n, "Welcome")
+
+# m = test(test1)
+# test1("Xyz")
+# test1("Zyx")
+# m("Hassan")
+
+# def mul(fun):
+#     def wrap(x,y):
+#         print("num 1 =", x,"num 2 =",y)
+#         if x== 0  or y == 0:
+#             print("Answer is zero")
+#         else:
+#             return fun(x,y)
+#     return wrap
+# @mul
+# def multi(x,y):
+#     return x*y
+
+# print(multi(10,20))
+# print(multi(0,20))
+# print(multi(10,0))
+
+# def stdec(fun):
+#     def wrap():
+#         print("Student Name")
+#         print("Student Subject")
+#         print("Student Package")
+#         fun()
+#     return wrap
+
+# def test():
+#     print("Company Name")
+
+# r = stdec(test)
+# r()
+
+# def d1(fun):
+#     def wrap1():
+#         f = fun()
+#         return f*f
+#     return wrap1
+# def d2(fun):
+#     def wrap1():
+#         f = fun()
+#         return 3*f
+#     return wrap1
+
+# @d1
+# @d2
+# def final():
+#     return 5
+
+# print(final())
+
+# def m():
+#     yield 'P'
+#     yield 'Q'
+#     yield 'R'
+
+# n = m()
+# print(type(n))
+# print(next(n))
+# print(next(n))
+# print(next(n))
+
+# def m(n):
+#     print('num')
+#     while n>0:
+#         yield n
+#         n = n-1
+# v = m(10)
+# for i in v:
+#     print(i)
+
+# def m(n):
+#     n1 = 0
+#     print('num')
+#     while n>=n1:
+#         yield n1
+#         n1 = n1+1
+# v = m(10)
+# for i in v:
+#     print(i)
+
+# def fib():
+#     x,y = 0,1
+#     while True:
+#         yield x
+#         x,y = y, x+y
+    
+# for i in fib():
+#     if i >=30:
+#         break
+#     print(i)
+
+# def factors(n):
+#     f = []
+#     for i in range(1, int(n**0.5)+1):
+#         if n%1 == 0:
+#             f.append(i)
+#             if i != n // i:
+#                 f.append(n // i)
+#     return sorted(f)
+
+# num = int(input("Enter Number"))
+# print("Factors of:  ", num, "is", factors(num))
+
+# def db(n):
+#     binary = ""
+#     while n > 0:
+#         rem = n % 2
+#         binary = str(rem) + binary
+#         n = n // 2
+#     return binary
+
+# num = int(input("Enter Number: "))
+# print("Binary Number of:" , num, "is ", db(num))
+
+# def gv():
+#     yield 1
+#     yield 2
+#     yield 3
+#     yield 4
+#     yield 5
+
+# gen = gv()
+
+# for i in gen:
+#     print(i)
+
+# def ca(n1, n2 , op):
+#     if op == "add":
+#         r = n1 + n2
+#         return r
+#     elif op == "sub":
+#         r = n1 - n2
+#         return r
+#     else: 
+#         return "Invalid"
+    
+# num1 = int(input("Enter Number 1:"))
+# num2 = int(input("Enter Number 2:"))
+# oper = input("Enter operation add or sub:")
+
+# result = ca(num1, num2, oper)
+# print(result)
+
+# n = 12
+# def m(p):
+#     j = n+p
+#     return j
+
+# o = m(5)
+# print(o)
