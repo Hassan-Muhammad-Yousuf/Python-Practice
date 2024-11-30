@@ -209,3 +209,170 @@
 # print(a1.p,a1.q)
 # print(a2.p,a2.q)
 # print(A.p,A.q)
+
+# class A:
+#     p = 50
+#     def __init__(self):
+#         A.q = 40
+#         del A.p
+#     def m1(self):
+#         A.r = 30
+#         del A.q
+#     @classmethod
+#     def m2(cls):
+#         cls.s = 20
+#         del A.r
+#     @staticmethod
+#     def m3():
+#         A.t = 10
+#         del A.s
+# print(A.__dict__)
+# a = A()
+# print(A.__dict__)
+# a.m1()
+# print(A.__dict__)
+# a.m2()
+# print(A.__dict__)
+# a.m3()
+# print(A.__dict__)
+# a.u = 100
+# print(A.__dict__)
+# del A.r
+# print(A.__dict__)
+# del Test.t
+# print(Test.__dict__)
+
+# class A:
+#     p = 50
+# a1 = A()
+# del a1.p
+
+# import sys
+
+# class Acc_Hldr:
+#     Bank = "HBL"
+#     def __init__(self,n, bal = 0.0):
+#         self.n = n
+#         self.bal = bal
+#     def deposite(self, amt):
+#         self.bal = self.bal + amt
+#         print("Balance", self.bal)
+#     def withdraw(self, amt):
+#         if amt > self.bal:
+#             print("insufficient bal")
+#             sys.exit(0)
+#         self.bal = self.bal - amt
+#         print("Balance", self.bal)
+# print(Acc_Hldr.Bank)
+# n = input("Enter Name: ")
+# ah = Acc_Hldr(n) 
+# while True:
+#     print('d-Deposite \nw-widthdraw \ne=exit')
+#     o = input("Choose the Option: ")
+#     if o == 'd' or o == 'D':
+#         amt = float(input("Enter Amount: "))
+#         ah.deposite(amt)
+#     elif o == 'w' or o == 'W':      
+#         amt = float(input("Enter Amount: "))
+#         ah.withdraw(amt)
+#     elif o == 'e' or o =='E':
+#         print("Thank you for banking")
+#         sys.exit(0)
+#     else:
+#         print('Please Try Again')
+
+# class Emp:
+#     def __init__(self, emp_n, emp_sal):
+#         self.emp_n = emp_n
+#         self.emp_sal = emp_sal
+#     def m1(self):
+#         print(self.emp_n)
+#         print('Salary', self.emp_sal)
+#     def m2(self):
+#         if self.emp_sal > 80000:
+#             print('GRade Pay 8')
+#         elif self.emp_sal > 70000:
+#             print('GRade Pay 7')
+#         elif self.emp_sal > 60000:
+#             print('GRade Pay 6')
+#         else: 
+#             print('Consolidated')
+# n = int(input('Enter Number of employees: '))
+# for i in range(n):
+#     emp_n = input('Enter Name: ')
+#     emp_sal = int(input('Enter Salary: '))
+#     e = Emp(emp_n, emp_sal)
+#     e.m1()
+#     e.m2()
+#     print()
+
+# class Book:
+#     auth = 3
+#     @classmethod
+#     def wri(cls, name):
+#         print('{} is writing a book with {} authors' .format(name, cls.auth))
+# Book.wri('Hassan')
+
+# class A:
+#     c = 0
+#     def __init__(self):
+#         A.c = A.c + 1
+#     @classmethod
+#     def m1(cls):
+#         print("No of object created: ", cls.c)
+# a1 = A()
+# a2 = A()
+# a3 = A()
+# a3 = A()
+# A.m1()
+
+# class A:
+#     @staticmethod
+#     def add(a,b):
+#         print("Addition", a+b)
+#     @staticmethod
+#     def mul(a,b):
+#         print("Multipilication", a*b)
+#     @staticmethod
+#     def Avg(a,b):
+#         print("Average", (a+b)/2)
+
+# A.add(2,3)
+# A.mul(2,3)
+# A.Avg(2,3)
+
+# class Emp:
+#     def emp_name1(self, emp_n):
+#         self.emp_n = emp_n
+#     def emp_name2(self):
+#         return self.emp_n
+#     def emp_sal1(self, emp_s):
+#         self.emp_s = emp_s
+#     def emp_sal2(self):
+#         return self.emp_s
+# n1 = int(input("Enter no of Employees: "))
+# for i in range(n1):
+#     e = Emp()
+#     emp_n = input("Enter Name: ")
+#     e.emp_name1(emp_n)
+#     emp_s = int(input("Enter Salary: "))
+#     e.emp_sal1(emp_s)
+#     print(e.emp_name2())
+#     print(e.emp_sal2())
+
+# class Book:
+#     def __init__(self, name, price):
+#         self.name = name
+#         self.price = price
+#     def m(self):
+#         print("Book Name: ", self.name)
+#         print("Book Price: ", self.price)
+
+# class update:
+#     def m2(b):
+#         b.price = b.price + 6000
+#         b.m()
+ 
+# b1 = Book('ETO', 4000)
+# print(b1.m())
+# update.m2(b1)
