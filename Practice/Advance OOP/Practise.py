@@ -203,3 +203,102 @@
 
 # # Call method3 using CD object
 # cd.method3()
+
+# class GOD:
+#     p = 10
+#     def __init__(self):
+#         self.q = 10
+#     def method1(self):
+#         print("Instance Method - 1")
+#     @classmethod
+#     def method2(self):
+#         print("Instance Method - 2")
+#     @staticmethod    
+#     def method3():
+#         print("Instance Method - 3")
+
+# class Moster(GOD):
+#     pass
+
+# m = Moster()
+# print(m.p)
+# print(m.q)
+# m.method1()
+# m.method2()
+# m.method3()
+
+# class computer():
+#     def __init__(self, gen, name):
+#         self.name = name
+#         self.gen = gen
+#     def m1(self):
+#         print("method m1")
+# class Mobile(computer):
+#     def __init__(self, gen, name, var, price):
+#         super().__init__(gen, name)
+#         self.var = var
+#         self.price = price
+#     def m2(self):
+#         print("method m2")
+#     def m3(self):
+#         print("Name: ",self.name)
+#         print("Gen: ",self.gen)
+#         print("Ver: ",self.var)
+#         print("Price: ",self.price)
+
+# m = Mobile(5, "Apple", 12.0, 100000)
+# m.m1()
+# m.m2()
+# m.m3()
+
+# class Man:
+#     def __init__(self,n,h,c):
+#         self.n = n
+#         self.h = h
+#         self.c = c
+#     def m1(self):
+#         print("Name: {} Height: {} Color: {}".format(self.n,self.h,self.c))
+
+# class Woman:
+#     def __init__(self,n,s):
+#         self.n = n
+#         self.s = s
+#     def m2(self):
+#         print("Method - 2")
+
+# class Kid(Woman):
+#     def __init__(self, n, s, g, a):
+#         super().__init__(n, s)
+#         self.g = g
+#         self.a = a
+#     def m3(self):
+#         print("Method - 3")
+#     def m4(self):
+#         print("Name: ", self.n)
+#         print("Status: ", self.s)
+#         print("Gender: ", self.g)
+
+#         print("Man Class info:")
+#         self.a.m1()
+
+# m = Man("Hassan", "6ft", "Brown")
+# k = Kid("Mahin", "divorced", "non-binary", m)
+# k.m2()
+# k.m3()
+# k.m4()
+
+# class Faculty:
+#     def __init__(self, name, dept):
+#         self.name = name
+#         self.dept = dept
+
+# class Student(Faculty):
+#     def __init__(self, name, dept, sub):
+#         super().__init__(name, dept)
+#         self.sub = sub
+#     def __str__(self):
+#         return 'Name: {}\nDepartment: {}\nSubject: {}'.format(self.name,self.dept,self.sub)
+    
+# s = Student('Hassan', 'SE', 'Python')
+
+# print(s)
