@@ -302,3 +302,196 @@
 # s = Student('Hassan', 'SE', 'Python')
 
 # print(s)
+
+# class A(B):
+#     pass
+# class B(A):
+#     pass
+
+# class A: pass
+# class B(A): pass
+# class C(A): pass
+# class D(B, C): pass
+# print(A.mro())
+# print(B.mro())
+# print(C.mro())
+# print(D.mro())
+
+# class Human:
+#     def __init__(self,name,gender):
+#         self.name = name
+#         self.gender = gender
+#     def method(self):
+#         print("Name :",self.name)
+#         print("Gender :",self.gender)
+# class Author(Human):
+#     def __init__(self, name, gender,title, price):
+#         super().__init__(name, gender)
+#         self.title = title
+#         self.price = price
+#     def method(self):
+#         super().method()
+#         print("title :",self.title)
+#         print("price :",self.price)
+
+# a = Author("Hassan","Male","Book",20000)
+# a.method()
+
+# class Parent:
+#     var1 = 18
+#     def __init__(self):
+#         self.b=10
+#     def m1(self):
+#         print("m1")
+#     @classmethod
+#     def m2(cls):
+#         print("class m2")
+#     @staticmethod
+#     def m3():
+#         print("Static Method")
+# class Child(Parent):
+#     var1 = 50
+#     def __init__(self):
+#         self.var2 = 100
+#         super().__init__()
+#         print(super().var1)
+#         super().m1()
+#         super().m2()
+#         super().m3()
+# c = Child()
+
+# class One:
+#     var1 = 12
+#     def __init__(self):
+#         self.var2 = 28
+# class Two(One):
+#     def m(self):
+#         print(super().var1)
+#         print(self.var2)
+# t = Two()
+# t.m()
+
+# class Parent:
+#     def __init__(self):
+#         print("Constructor")
+#     def m1(self):
+#         print("Instance Method")
+#     @classmethod
+#     def m2(cls):
+#         print("Class Method")
+#     @staticmethod
+#     def m3():
+#         print("Static Method")
+
+# class child(Parent):
+#     def __init__(self):
+#         super().__init__()
+#         super().m1()
+#         super().m2()
+#         super().m3()
+#     def m1(self):
+#         super().__init__()
+#         super().m1()
+#         super().m2()
+#         super().m3()
+# c = child()
+# c.m1()
+
+# class Parent:
+#     def __init__(self):
+#         print("Constructor")
+#     def m1(self):
+#         print("Instance Method")
+#     @classmethod
+#     def m2(cls):
+#         print("Class Method")
+#     @staticmethod
+#     def m3():
+#         print("Static Method")
+# class Child(Parent):
+#     @classmethod
+#     def m(cls):
+#         # super(Child,cls).__init__(cls)
+#         # super(Child,cls).m1(cls)
+#         i = cls()
+#         i.m1()
+#         super().m2()
+#         super().m3()
+# Child.m()
+
+# class Parent:
+#     def __init__(self):
+#         print("Constructor")
+#     def m1(self):
+#         print("Instance Method")
+#     @classmethod
+#     def m2(cls):
+#         print("Class Method")
+#     @staticmethod
+#     def m3():
+#         print("Static Method")
+# class Child(Parent):
+#     @staticmethod
+#     def m():
+#         # super(Child, Child).m1() #invalid
+#         i = Parent()
+#         i.m1()
+#         super(Child, Child).m2()
+#         super(Child, Child).m3()   
+# Child.m()
+
+# class Man:
+#     def m1(self):
+#         print("Man")
+# class Woman:
+#     def m1(self):
+#         print("Woman")
+# class Boy:
+#     def m1(self):
+#         print("Boy")
+# class Kid:
+#     def m1(self):
+#         print("Kid")
+# def fun(x):
+#     x.m1()
+# l = [Man(),Woman(),Boy(),Kid()]
+# for x in l:
+#     fun(x)
+
+# class Man:
+#     def m1(self):
+#         print("Man")
+# class Woman:
+#     def m2(self):
+#         print("Woman")
+
+# def fun(x):
+#     x.m1()
+
+# m = Man()
+# fun(m)
+# w = Woman()
+# fun(w)
+
+
+# class Man:
+#     def m1(self):
+#         print("Man")
+# class Woman:
+#     def m2(self):
+#         print("Woman")
+# class Boy:
+#     def m3(self):
+#         print("Boy")
+
+# def fun(x):
+#     if hasattr(x, 'm1'):
+#         x.m1()
+#     elif hasattr(x, 'm2'):
+#         x.m2()
+# m = Man()
+# fun(m)
+# w= Woman()
+# fun(w)
+# b = Boy()
+# fun(b)
