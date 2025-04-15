@@ -495,3 +495,182 @@
 # fun(w)
 # b = Boy()
 # fun(b)
+
+# class Boy:
+#     def __init__(self,toys):
+#         self.toys = toys
+#     def __add__(self,var):
+#         return self.toys+var.toys
+# b1 = Boy(40)
+# b2 = Boy(50)
+# print(b1 + b2)
+
+# class Worker:
+#     def __init__(self,name,sal):
+#         self.name = name
+#         self.sal = sal
+#     def __gt__(self,var):
+#         return self.sal>var.sal
+#     def __le__(self,var):
+#         return self.sal<=var.sal
+# w1 = Worker("A",10000)
+# w2 = Worker("B",20000)
+# print(w1>w2)
+# print(w1<w2)
+# print(w1<=w2)
+# print(w1>=w2)
+
+# class A:
+#     def __init__(self,sal):
+#         self.sal = sal
+#     def __mul__(self,var):
+#         return self.sal*var.days
+# class B:
+#     def __init__(self,days):
+#         self.days = days
+# a = A(500)
+# b = B(27)
+# print("Total Amount : ", a*b)
+
+# class A:
+#     def m(self):
+#         print("no args")
+#     def m(self,x):
+#         print("1 args")
+#     def m(self,x,y):
+#         print("2 args")
+
+# a = A()
+# # a.m()
+# # a.m(4)
+# a.m(4,5)
+
+# class Arth:
+#     def sum(self, x = None, y = None, z = None):
+#         if x!= None and y!= None and z!= None:
+#             print('3 args:',x+y+z)
+#         elif x!= None and y!= None:
+#             print('2 args:',x+y)
+#         else:
+#             print('default')
+# a = Arth()
+# a.sum(3,4)
+# a.sum(3,4,5)
+# a.sum(5)
+
+# class Arth:
+#     def sum(self, *x):
+#         s = 0
+#         for i in x:
+#             s = s + i
+#         print('sum', s)
+# a = Arth()
+# a.sum()
+# a.sum(2,5)
+# a.sum(2,3,4)
+# a.sum(8)
+# a.sum()
+
+# class Arth:
+#     def __init__(self):
+#         print('No-Args Constr')
+#     def __init__(self,x):
+#         print('1-Args Constr')
+#     def __init__(self,x,y):
+#         print('2-Args Constr')
+
+# # a = Arth()
+# # a = Arth(4)
+# a = Arth(3,4)
+
+# class Arth:
+#     # def __init__(self, x = None,y = None,z = None):
+#     def __init__(self,*x):
+#         print('Constr')
+
+# a = Arth()
+# a = Arth(1)
+# a = Arth(2,3)
+# a = Arth(2,3,4)
+
+# class A:
+#     def m1(self):
+#         print(" A Class m1")
+#     def m2(self):
+#         print(" A Class m2")
+# class B(A):
+#     def m2(self):
+#         print(" B Class m2")
+# a = B()
+# a.m1() 
+# a.m2() 
+
+# class A:
+#     def m1(self):
+#         print(" A Class m1")
+#     def m2(self):
+#         print(" A Class m2")
+# class B(A):
+#     def m2(self):
+#         super().m2()
+#         print(" B Class m2")
+# class C(B):
+#     def m2(self):
+#         super().m2()
+#         print(" C Class m2")
+# a = C()
+# a.m1() 
+# a.m2() 
+
+# class Parent:
+#     def __init__(self,name):
+#         self.name = name
+
+# class Child(Parent):
+#     def __init__(self, name,dept):
+#         super().__init__(name)
+#         self.dept = dept
+#     def m(self):
+#         print('Name :',self.name)
+#         print('Department  :',self.dept)
+
+# c1 = Child("Hassan", "Beng")
+# c1.m()
+# c2 = Child("Mahin", "BSC")
+# c2.m()
+
+from abc import *
+# class abst(ABC):
+#     pass
+# a = abst()
+
+# class abst:
+#     @abstractmethod
+#     def m(self):
+#         print('Abstract')
+# a = abst()
+# a.m()
+
+# class A(ABC):
+#     @abstractmethod
+#     def m(self):
+#         pass
+# class B(A): pass
+
+# v = B()
+
+# class A:
+#     @abstractmethod
+#     def m(self):
+#         self
+# class B(A):
+#     def m(self):
+#         return 'B Class m'
+# class C(A):
+#     def m(self):
+#         return 'C Class m'
+
+# b = B()
+# print(b.m())
+# c = C()
+# print(c.m())
