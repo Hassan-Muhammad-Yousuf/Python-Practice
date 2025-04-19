@@ -674,3 +674,69 @@ from abc import *
 # print(b.m())
 # c = C()
 # print(c.m())
+
+# class DBInterface(ABC):
+#     @abstractmethod
+#     def connect(self): pass
+#     @abstractmethod
+#     def disconnect(self): pass
+# class DB2(DBInterface):
+#     def connect(self):
+#         print('Connecting to DB2')
+#     def disconnect(self):
+#         print('Disconnecting to DB2')
+# class Mysql(DBInterface):
+#     def connect(self):
+#         print('Connecting to MySql')
+#     def disconnect(self):
+#         print('Disconnecting to MySql')
+# dbn = input("Enter Database Name: ")
+# cn = globals()[dbn]
+# var = cn()
+# var.connect() 
+# var.disconnect() 
+
+# class CollegeAutomation(ABC):
+#     @abstractmethod
+#     def m1(self): pass
+#     @abstractmethod
+#     def m2(self): pass
+#     @abstractmethod
+#     def m3(self): pass
+# class AbsCls(CollegeAutomation):
+#     def m1(self):
+#         print("Method 1 implementation")
+#     def m2(self):
+#         print("Method 2 implementation")
+# class ConcreteCls(AbsCls):
+#     def m3(self):
+#         print("Method 3 implementation")
+# c = ConcreteCls()
+# c.m1()
+# c.m2()
+# c.m3()
+
+# class Boss:
+#     p = 100
+#     _q = 200
+#     __r = 300
+#     def m1(self):
+#         print(self.p)
+#         print(self._q)
+#         print(self.__r)
+# b = Boss()
+# b.m1()
+# print(Boss.p)
+# print(Boss._q)
+# print(Boss.__r)
+
+# class Gama:
+#     def __init__(self,name):
+#         self.name = name
+#     def __str__(self):
+#         return 'Name {}'.format(self.name)
+    
+# g1 = Gama('Hassan')
+# g2 = Gama('mahin')
+# print(g1)
+# print(g2)
