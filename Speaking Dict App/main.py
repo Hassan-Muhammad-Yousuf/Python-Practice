@@ -4,10 +4,18 @@ import speech_recognition as sr
 import datetime
 
 class Speaker:
-    def __init__(self, voice = "male"):
-        pass
+    def __init__(self, gen_voice = "male"):
+        self.engine = pyttsx3.init('sapi5')
+        voices = self.engine.setProperty('voices')
+        if gen_voice == "female":
+            self.engine.setProperty('voice', voices[1].id)
+        else: 
+            self.engine.setProperty('voice', voices[0].id)
+
     def speak(self, text):
-        pass
+        print(f"\n[Speaking]: {text}")
+        self.engine.say(text)
+        self.engine.runAndWait()
 
 class Dict_App:
     def __init__(self):
