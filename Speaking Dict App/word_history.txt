@@ -1,0 +1,27 @@
+----- 2025-04-20 02:49:04.245866 -----
+Word: hello
+Pronunciation: /hello/
+Meaning:
+ noun:
+   - "Hello!" or an equivalent greeting.
+ verb:
+   - To greet with "hello".
+ interjection:
+   - A greeting (salutation) said when meeting someone or acknowledging someone’s arrival or presence.
+   - A greeting used when answering the telephone.
+   - A call for response if it is not clear if anyone is present or listening, or if a telephone conversation may have been disconnected.
+   - Used sarcastically to imply that the person addressed or referred to has done something the speaker or writer considers to be foolish.
+   - An expression of puzzlement or discovery.
+
+----- 2025-04-20 02:53:18.228473 -----
+Word: evidence
+Pronunciation: /evidence/
+Meaning:
+ noun:
+   - Facts or observations presented in support of an assertion.
+   - Anything admitted by a court to prove or disprove alleged matters of fact in a trial.
+   - One who bears witness.
+   - A body of objectively verifiable facts that are positively indicative of, and/or exclusively concordant with, that one conclusion over any other.
+ verb:
+   - To provide evidence for, or suggest the truth of.
+
