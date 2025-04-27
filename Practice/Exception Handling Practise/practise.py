@@ -76,3 +76,45 @@
 #     print("outer except block")
 # finally:
 #     print("outer finally block")
+
+# try:
+#     print("try")
+#     print(10/0)
+# except:
+#     print("Except")
+# else:
+#     print("else")
+# finally:
+#     print("Finally")
+
+# class A(Exception):
+#     def __init__(self,args):
+#         self.msg = args
+# class B(Exception):
+#     def __init__(self,args):
+#         self.msg = args
+# age = int(input("Enter Age: "))
+# if age > 60:
+#     raise A("Senior Citizens")
+# elif age < 18:
+#     raise B("Child / Young")
+# else:
+#     raise A("Default Exception")
+
+# def fun(a):
+#     return a**a
+# assert fun(5) == 25, "Square of 5 is 25"
+# assert fun(6) == 36, "Square of 6 is 36"
+# assert fun(7) == 49, "Square of 7 is 49"
+# print(fun(5))
+# print(fun(6))
+# print(fun(8))
+
+# def fun(a):
+#     return a*a
+# assert fun(5) == 25, "Square of 5 is 25"
+# assert fun(6) == 36, "Square of 6 is 36"
+# assert fun(7) == 49, "Square of 7 is 49"
+# print(fun(5))
+# print(fun(6))
+# print(fun(7))
