@@ -1,0 +1,21 @@
+# f = open("test.txt",'w')
+# print("File Name: ",f.name)
+# print("File Mode: ",f.mode)
+# print("File Readable: ",f.readable())
+# print("File Writeable: ",f.writable())
+# print("File close: ",f.closed)
+# f.close()
+# print("File Closed", f.closed)
+
+# f = open("test.txt","w")
+# f.write("Hassan\n")
+# f.write("Muhammad\n")
+# f.write("Yousuf\n")
+# print("Sucessfully write a Data")
+# f.close()
+
+# f = open("test.txt","w")
+# l = ["Hassan\n","Ali\n","Mahin\n","Vetschau"]
+# f.writelines(l)
+# print("Sucessfully Written Data")
+# f.close()
