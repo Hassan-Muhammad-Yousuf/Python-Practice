@@ -19,3 +19,53 @@
 # f.writelines(l)
 # print("Sucessfully Written Data")
 # f.close()
+
+# f = open("test.txt", "r")
+# d = f.read()
+# print(d)
+# f.close()
+
+# f = open("test.txt", "r")
+# l1 = f.readline()
+# print(l1,end='')
+# l2 = f.readline()
+# print(l2,end='')
+# l3 = f.readline()
+# print(l3,end='')
+# f.close()
+
+# f = open("test.txt", "r")
+# l = f.readlines()
+# for i in l:
+#     print(i, end='')
+# f.close()
+
+# with open("test.txt", "w") as f:
+#     f.write("GISMA\n")
+#     f.write("Business\n")
+#     f.write("School\n")
+#     print("File Closed", f.closed)
+# print("File Closed", f.closed)
+
+# f = open("test.txt", "r")
+# print(f.tell())
+# print(f.read(2))
+# print(f.tell())
+# print(f.read(3))
+# print(f.tell())
+
+# d = "Hassan Muhammad Yousuf"
+# f = open("test.txt","w")
+# f.write(d)
+# with open("test.txt",'r+') as f:
+#     t = f.read()
+#     print(t)
+#     print("Current Cursor Position: ", f.tell())
+#     print("After Change the Seek() Position: ")
+#     f.seek(7)
+#     print("Current Cursor Position: ", f.tell())
+#     f.write("| A good being")
+#     f.truncate()
+#     f.seek(0)
+#     t = f.read()
+#     print(t)
