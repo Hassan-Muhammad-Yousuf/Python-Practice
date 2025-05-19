@@ -131,3 +131,59 @@
 #     for j in i:
 #         print(j,"\t",end='')
 #     print()
+
+# from zipfile import *
+# f = ZipFile("f.zip",'w', ZIP_DEFLATED)
+# f.write("f1.txt")
+# f.write("f2.txt")
+# f.write("f3.txt")
+# f.close()
+# print("f.zip file is created")
+
+# from zipfile import *
+# f = ZipFile("f.zip", 'r', ZIP_STORED)
+# n = f.namelist()
+# for i in n:
+#     print("File Name: ", i)
+#     print("File Data is: ")
+#     f1 = open(i, 'r')
+#     print(f1.read())
+#     print()
+
+
+
+# cwd = os.getcwd()
+# print("Current Working Directory: ", cwd)
+
+# os.mkdir("temp")
+# print("Temp dir is created")
+
+# os.mkdir("temp/temp1")
+# print("Temp1 dir is created in Temp dir")
+
+# os.rmdir("temp/temp1")
+# print("Temp 2 is deleted")
+
+# os.removedirs("temp/temp1")
+# print("All temp dir are removed")
+
+# os.rename("temp","New_temp")
+# print("Dir Renamed")
+
+# print(os.listdir("."))
+
+# for direp,dirn,fname in os.walk('.'):
+#     print("Current Dir Path: ", direp)
+#     print("Dir: ", dirn)
+#     print("Files: ", fname)
+#     print()
+
+# stat = os.stat("test.txt")
+# print(stat)
+
+# import os
+# from datetime import *
+# s = os.stat("test.txt")
+# print("File Size in Bytes: ", s.st_size)
+# print("File Last Accessed Time: ", datetime.fromtimestamp(s.st_atime))
+# print("File Last Modified Time: ", datetime.fromtimestamp(s.st_mtime))
