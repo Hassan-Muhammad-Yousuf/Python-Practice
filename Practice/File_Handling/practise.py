@@ -69,3 +69,65 @@
 #     f.seek(0)
 #     t = f.read()
 #     print(t)
+
+# import os, sys
+# fn = input("Enter File Name: ")
+# if os.path.isfile(fn):
+#     print("File Here: ", fn)
+#     f = open(fn, "r")
+# else:
+#     print("File Doesnot exist: ", fn)
+#     sys.exit(0)
+#     print("File Data: ")
+# d = f.read()
+# print(d)
+
+
+# import os, sys
+# fn = input("Enter File Name: ")
+# if os.path.isfile(fn):
+#     print("File Here: ", fn)
+#     f = open(fn, "r")
+# else:
+#     print("File Doesnot exist: ", fn)
+#     sys.exit(0)
+#     print("File Data: ")
+# lc = wc = cc = 0
+# for i in f:
+#     lc = lc + 1
+#     cc = cc + len(i)
+#     w = i.split()
+#     wc = wc+len(w)
+# print("Number of Lines: ",lc)
+# print("Number of Word Counts: ",wc)
+# print("Number of Character Counts: ",cc)
+
+
+# f1 = open("logo (1).png","rb")
+# f2 = open("newpic.jpg","wb")
+# bytes = f1.read()
+# f2.write(bytes)
+# print("New Image with New name: newpic.jpg")
+
+# import csv
+# with open("emp.csv", "w", newline='')as f:
+#     w = csv.writer(f)
+#     w.writerow(["ENO", "ENAME", "ESAL", "EADDR"])
+#     n = int(input("Enter Number of Employees: "))
+#     for i in range(n):
+#         eno = input("Enter Employee Number: ")
+#         ename = input("Enter Employee Name: ")
+#         esal = input("Enter Employee Salary: ")
+#         eadd = input("Enter Employee address: ")
+#         w.writerow([eno,ename,esal,eadd])
+# print("Employee Data Written into CSV file Sucessfully")
+
+# import csv
+# f = open("emp.csv",'r')
+# r = csv.reader(f)
+# d = list(r)
+# print(d)
+# for i in d:
+#     for j in i:
+#         print(j,"\t",end='')
+#     print()
