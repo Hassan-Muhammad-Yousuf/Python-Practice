@@ -1,0 +1,5 @@
+1001, Alice Johnson, HR, 55000
+1002, Bob Smith, IT, 72000
+1003, Carol Davis, Finance, 68000
+1004, David Wilson, Marketing, 60000
+1005, Emma Brown, Sales, 58000
