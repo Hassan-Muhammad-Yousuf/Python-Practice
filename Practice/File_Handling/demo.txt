@@ -1,0 +1,7 @@
+This is a sample text file.
+It contains a few lines to demonstrate file reading.
+You should print only those lines that have the word print.
+Let's see how print works in this context.
+Some lines will not contain the keyword.
+This line has nothing important.
+The final line says: print this line too.
