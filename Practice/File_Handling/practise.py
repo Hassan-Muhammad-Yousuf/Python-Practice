@@ -187,3 +187,22 @@
 # print("File Size in Bytes: ", s.st_size)
 # print("File Last Accessed Time: ", datetime.fromtimestamp(s.st_atime))
 # print("File Last Modified Time: ", datetime.fromtimestamp(s.st_mtime))
+
+# import pickle
+# class Employee:
+#     def __init__(self, eno, ename, esal, eaddr):
+#         self.eno = eno
+#         self.ename = ename
+#         self.esal = esal
+#         self.eaddr = eaddr
+#     def display(self):
+#         print(self.eno,"\t",self.ename,"\t",self.esal,"\t",self.eaddr)
+
+# with open("emp.dat",'wb') as f:
+#     e = Employee(1000,"Hassan",10000,"Germany")
+#     pickle.dump(e,f)
+#     print("Pickling of Employees Objects completed")
+# with open("emp.dat",'rb') as f:
+#     obj = pickle.load(f)
+#     print("Employee data after unpickling")
+#     obj.display()
