@@ -141,3 +141,27 @@
 # t.join(5)
 # for i in range(2):
 #     print("Yousuf")
+
+# from threading import *
+# print(current_thread().daemon)
+# current_thread().setDaemon(True)
+
+# from threading import Thread
+# def m1():
+#     print("hassan")
+# t =Thread(target=m1)
+# print(t.daemon)
+# t.setDaemon(True)
+# print(t.daemon)
+
+# from threading import *
+# import time
+# def m1():
+#     for i in range(5):
+#         print("Child 1")
+# time.sleep(2)
+# t =Thread(target=m1)
+# t.setDaemon(True)
+# t.start()
+# time.sleep(5)
+# print("End Main")
