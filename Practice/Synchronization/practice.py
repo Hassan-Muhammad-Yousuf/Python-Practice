@@ -115,3 +115,55 @@ from threading import *
 # t2 = Thread(target=prod,args=(c,))
 # t1.start()
 # t2.start()
+
+# from threading import *
+# import time
+# import random
+# items = []
+# def produce(c):
+#     while True:
+#         c.acquire()
+#         item = random.randint(1,25)
+#         print("Producer Prodcuing Item:",item)
+#         items.append(item)
+#         print("Prodcuer Notification")
+#         c.notify()
+#         c.release()
+#         time.sleep(3)
+# def consume(c):
+#     while True:
+#         c.acquire()
+#         print("Consumer Waiting")
+#         c.wait()
+#         print("Consumer consumed the items",items.pop())
+#         c.release()
+#         time.sleep(3)
+# c = Condition()
+# t1 = Thread(target=consume,args=(c,))
+# t2 = Thread(target=produce,args=(c,))
+# t1.start()
+# t2.start()
+
+from threading import *
+import time
+import random
+import queue
+items = []
+def produce(c):
+    while True:
+        item = random.randint(1,25)
+        print("Producer Prodcuing Item:",item)
+        q.put(item)
+        print("Prodcuer Notification")
+        time.sleep(3)
+def consume(c):
+    while True:
+        print("Consumer Waiting")
+        print("Consumer consumed the items",q.get())
+        print('-----------------------------------------')
+        time.sleep(3)
+q =  queue.Queue()
+t1 = Thread(target=consume,args=(q,))
+t2 = Thread(target=produce,args=(q,))
+t1.start()
+t2.start()
