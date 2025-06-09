@@ -144,26 +144,93 @@ from threading import *
 # t1.start()
 # t2.start()
 
+# from threading import *
+# import time
+# import random
+# import queue
+# items = []
+# def produce(c):
+#     while True:
+#         item = random.randint(1,25)
+#         print("Producer Prodcuing Item:",item)
+#         q.put(item)
+#         print("Prodcuer Notification")
+#         time.sleep(3)
+# def consume(c):
+#     while True:
+#         print("Consumer Waiting")
+#         print("Consumer consumed the items",q.get())
+#         print('-----------------------------------------')
+#         time.sleep(3)
+# q =  queue.Queue()
+# t1 = Thread(target=consume,args=(q,))
+# t2 = Thread(target=produce,args=(q,))
+# t1.start()
+# t2.start()
+
+# import queue
+# q = queue.Queue()
+# q.put(30)
+# q.put(20)
+# q.put(10)
+# q.put(5)
+# while not q.empty():
+#     print(q.get(),end=" ")
+
+# import queue
+# q = queue.LifoQueue()
+# q.put(30)
+# q.put(20)
+# q.put(10)
+# q.put(5)
+# while not q.empty():
+#     print(q.get(),end=" ")
+
+# import queue
+# q = queue.PriorityQueue()
+# q.put(30)
+# q.put(5)
+# q.put(20)
+# q.put(10)
+# while not q.empty():
+#     print(q.get(),end=" ")
+
+# import queue
+# q = queue.PriorityQueue()
+# q.put((4,'Hassan'))
+# q.put((1,'Yousuf'))
+# q.put((2,'Nan'))
+# q.put((5,'Hawl'))
+# while not q.empty():
+#     print(q.get()[1],end = " ")
+
+# from threading import *
+# import time
+# l= Lock()
+# def m1(n):
+#     l.acquire()
+#     try: 
+#         for i in range(3):
+#             print("Hi : ", end=" ")
+#             time.sleep(2)
+#             print(n)
+#     finally:
+#         l.release()
+# t1 = Thread(target=m1, args=('Hassan',))
+# t2 = Thread(target=m1, args=('Yousuf',))
+# t1.start()
+# t2.start()
+
 from threading import *
 import time
-import random
-import queue
-items = []
-def produce(c):
-    while True:
-        item = random.randint(1,25)
-        print("Producer Prodcuing Item:",item)
-        q.put(item)
-        print("Prodcuer Notification")
-        time.sleep(3)
-def consume(c):
-    while True:
-        print("Consumer Waiting")
-        print("Consumer consumed the items",q.get())
-        print('-----------------------------------------')
-        time.sleep(3)
-q =  queue.Queue()
-t1 = Thread(target=consume,args=(q,))
-t2 = Thread(target=produce,args=(q,))
+l= Lock()
+def m1(n):
+    with l:
+        for i in range(3):
+            print("Hi : ", end=" ")
+            time.sleep(2)
+            print(n)
+t1 = Thread(target=m1, args=('Hassan',))
+t2 = Thread(target=m1, args=('Yousuf',))
 t1.start()
 t2.start()
