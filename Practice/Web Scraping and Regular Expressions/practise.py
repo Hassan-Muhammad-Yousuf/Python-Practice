@@ -108,3 +108,34 @@
 # m = re.finditer("p{2,3}","pqppqqpppqq")
 # for i in m:
 #     print(i.start(),"---->",i.group())
+
+# import re 
+# s = input("Enter Pattern: ")
+# m =  re.match(s,'pqrstuvw')
+# if m != None:
+#     print("Match Begning")
+#     print("start Index: ",m.start(),"End Index",m.end())
+# else:
+#     print("Not Matched")
+
+# import re 
+# s = input("Enter Pattern: ")
+# m =  re.fullmatch(s,'pqrstuvw')
+# if m != None:
+#     print("Matched")
+#     # print("start Index: ",m.start(),"End Index",m.end())
+# else:
+#     print("Not Matched")
+
+# import re 
+# s = input("Enter Pattern: ")
+# m =  re.search(s,'pqrstuvw')
+# if m != None:
+#     print("Match Pattern")
+#     print("start Index: ",m.start(),"End Index",m.end())
+# else:
+#     print("Not Matched")
+
+import re 
+l = re.findall("[0-9]","d5s4a6s8d1a3")
+print(sorted(l))
