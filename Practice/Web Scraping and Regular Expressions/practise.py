@@ -216,3 +216,24 @@ import urllib.request
 #     t = u.read()
 #     title = re.findall("<title>.*</title>",str(t),re.I)
 #     print(title[0])
+
+# u = urllib.request.urlopen("http://www.mnnit.ac.in/index.php/contact-us")
+# t = u.read()
+# num = re.findall("[0-9-]{7}[0-9-]+",str(t),re.I)
+# for n in num:
+#     print(n)
+
+# s = input("Enter E-Mails: ")
+# m = re.fullmatch("\w[a-zA-Z0-9_.]*@gmail[.]com",s)
+# if m != None:
+#     print("Valid")
+# else:
+#     print("Invalid")
+
+
+# s = input("Vehical Number: ")
+# m = re.fullmatch("KC[019][0-9][A-Z]{2}\d{4}",s)
+# if m != None:
+#     print("Valid")
+# else:
+#     print("InValid")
