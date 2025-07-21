@@ -1,5 +1,8 @@
-7899668842
-7899554463
-7813216464
-7832514684
-7853216839
+Apple is a fruit. 
+    This line does not have the letter.
+    A new project starts today.
+    banana is yellow.
+    ALWAYS aim high.
+    no uppercase here.
+    Amazing things happen every day.
+    
