@@ -204,3 +204,15 @@
 #         print("Extracted all contact numbers")
 # f1.close()
 # f2.close()
+
+import re, urllib
+import urllib.request
+
+# s = "google scholar".split()
+# print(s)
+# for i in s:
+#     print("Search",i)
+#     u = urllib.request.urlopen("http://"+i+".com")
+#     t = u.read()
+#     title = re.findall("<title>.*</title>",str(t),re.I)
+#     print(title[0])
