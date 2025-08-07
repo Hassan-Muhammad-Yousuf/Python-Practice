@@ -13,7 +13,7 @@ A simple Python command-line calculator for basic arithmetic operations: additio
 
 1. Run the script in your terminal:
     ```bash
-    python arthinetic_calc.py
+    python calc.py
     ```
 2. Follow the prompts to select an operation:
     - `a` for Addition
